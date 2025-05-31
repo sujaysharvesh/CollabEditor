@@ -3,10 +3,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
 import java.util.Collections;
 
 
 @SpringBootApplication
+@EnableDiscoveryClient
 public class CollabAuthApplication {
 	private static final Logger logger = LoggerFactory.getLogger(CollabAuthApplication.class);
 	public static void main(String[] args) {
