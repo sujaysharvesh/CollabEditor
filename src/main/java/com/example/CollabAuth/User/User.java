@@ -2,10 +2,7 @@ package com.example.CollabAuth.User;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -16,6 +13,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Entity
 @Builder
+@Setter
 public class User {
 
     @Id
@@ -25,7 +23,10 @@ public class User {
     private String username;
     private String password;
     private String email;
+
+    @Enumerated(EnumType.STRING)
     private AuthProvider provider;
+
     private String providerId;
     private LocalDateTime createdAt;
 
@@ -35,4 +36,9 @@ public class User {
         FACEBOOK,
         GITHUB
     }
+
+    public AuthProvider getProvider() {
+        return provider;
+    }
+
 }

@@ -5,15 +5,17 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
 import java.util.UUID;
 
 
 @Repository
 public interface UserRepo extends JpaRepository<User, UUID> {
 
-    @Query("SELECT u FROM User u WHERE u.username = :username")
-    Boolean existsByUsername(@Param("username") String username);
+    boolean existsByUsername(String username);
+    boolean existsByEmail(String email);
 
     @Query("SELECT u FROM User u WHERE u.email = :email")
-    Boolean existsByEmail(@Param("email") String email);
+    Optional<User> findByEmail(@Param("email") String email);
+
 }

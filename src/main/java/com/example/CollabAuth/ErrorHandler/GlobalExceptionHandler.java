@@ -25,7 +25,7 @@ public class GlobalExceptionHandler {
                 .stream()
                 .map(FieldError::getDefaultMessage)
                 .collect(Collectors.toList());
-        ApiResponse<Void> response = ApiResponse.error("Validation Error", errors);
+        ApiResponse<Void> response = ApiResponse.errors("Validation Error", errors);
         return ResponseEntity.badRequest().body(response);
     }
 
@@ -51,6 +51,13 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
     }
 
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<ApiResponse<Void>> handleResourceNotFoundException(ResourceNotFoundException ex) {
+        log.error("Resource not found: {}", ex.getMessage());
+        ApiResponse<Void> response = ApiResponse.error(ex.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+    }
+
 
     public static class DuplicateResourceException extends RuntimeException {
         public DuplicateResourceException(String message) {
@@ -60,6 +67,12 @@ public class GlobalExceptionHandler {
 
     public static class ValidationException extends RuntimeException {
         public ValidationException(String message) {
+            super(message);
+        }
+    }
+
+    public static class ResourceNotFoundException extends RuntimeException {
+        public ResourceNotFoundException(String message) {
             super(message);
         }
     }

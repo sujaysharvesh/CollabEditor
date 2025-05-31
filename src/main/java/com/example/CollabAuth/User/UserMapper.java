@@ -1,14 +1,22 @@
 package com.example.CollabAuth.User;
 
 import com.example.CollabAuth.User.DTO.UserResponseDTO;
+import org.hibernate.annotations.Comment;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.springframework.stereotype.Component;
 
-@Mapper(componentModel = "spring")
-public interface UserMapper {
+@Component
+public class UserMapper {
 
-    @Mapping(target = "id", ignore = true)
-    @Mapping(target = "password", ignore = true)
-    @Mapping(target = "providerId", ignore = true)
-    UserResponseDTO toUserResponseDTO(User user);
+    public UserResponseDTO toUserResponseDTO(User user) {
+        if (user == null) {
+            return null;
+        }
+        return UserResponseDTO.builder()
+                .username(user.getUsername())
+                .email(user.getEmail())
+                .createdAt(user.getCreatedAt())
+                .build();
+    }
 }
