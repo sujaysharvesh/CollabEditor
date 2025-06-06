@@ -4,6 +4,7 @@ import com.example.CollabAuth.OAuth.UserPrinciple;
 import com.example.CollabAuth.User.User;
 import com.example.CollabAuth.User.UserRepo;
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
@@ -14,6 +15,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
@@ -74,6 +76,17 @@ public class JwtUtils {
         UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
                 userPrinciple, token, userPrinciple.getAuthorities());
         return usernamePasswordAuthenticationToken;
+    }
+
+    public boolean isValidToken(String token) {
+        try {
+            Jwts.parser().setSigningKey(secretKey).build().parseSignedClaims(token);
+            return true;
+        } catch (JwtException e) {
+            return false;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 

@@ -20,4 +20,8 @@ public class RedisBlockListService {
         stringRedisTemplate.opsForValue().set(token, "Blocked", expirationTime, TimeUnit.MILLISECONDS);
     }
 
+    public boolean isBlocked(String token) {
+        return Boolean.TRUE.equals(stringRedisTemplate.hasKey(token));
+    }
+
 }
