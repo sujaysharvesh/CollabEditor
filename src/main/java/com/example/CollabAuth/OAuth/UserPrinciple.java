@@ -1,6 +1,7 @@
 package com.example.CollabAuth.OAuth;
 
 import com.example.CollabAuth.User.User;
+import io.jsonwebtoken.Claims;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -8,10 +9,8 @@ import org.springframework.security.oauth2.core.oidc.OidcIdToken;
 import org.springframework.security.oauth2.core.oidc.OidcUserInfo;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Map;
-import java.util.UUID;
+import java.security.AuthProvider;
+import java.util.*;
 
 
 @AllArgsConstructor
@@ -41,6 +40,32 @@ public class UserPrinciple implements OidcUser {
                 .provider(user.getProvider())
                 .build();
     }
+
+    public static UserPrinciple createByClaims(Claims claims) {
+        User.AuthProvider authProvider;
+        try {
+            authProvider = User.AuthProvider.valueOf(claims.get("auth_provider", String.class));
+        } catch (IllegalArgumentException e) {
+            authProvider = User.AuthProvider.LOCAL;
+        }
+        Collection<? extends GrantedAuthority> authorities1;
+        try {
+            authorities1 = (((List<String>) claims.get("roles")))
+                    .stream().map(SimpleGrantedAuthority::new).toList();
+        } catch (Exception e) {
+            authorities1 = Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));
+        }
+        return UserPrinciple.builder()
+                .id(UUID.fromString(claims.get("id", String.class)))
+                .username(claims.get("username", String.class))
+                .email(claims.get("email", String.class))
+                .provider(authProvider)
+                .authorities(authorities1)
+                .attributes(claims)
+                .build();
+
+    }
+
 
     @Override
     public Map<String, Object> getAttributes() {

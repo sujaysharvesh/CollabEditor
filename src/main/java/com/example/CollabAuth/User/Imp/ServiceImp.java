@@ -12,10 +12,10 @@ import com.example.CollabAuth.User.UserMapper;
 import com.example.CollabAuth.User.UserRepo;
 import com.example.CollabAuth.User.UserService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Service
 @AllArgsConstructor
@@ -53,6 +53,19 @@ public class ServiceImp implements UserService {
         return response;
     }
 
+    @Override
+    public UserResponseDTO currentUser(UserPrinciple userPrinciple) {
+        User currentUser = getCurrentUser(userPrinciple.getId());
+        User user = User.builder()
+                .id(currentUser.getId())
+                .username(currentUser.getUsername())
+                .email(currentUser.getEmail())
+                .build();
+        UserResponseDTO  response = userMapper.toUserResponseDTO(user);
+        response.setId(currentUser.getId());
+        return response;
+    }
+
     private void validateUserRegistration(RegisterRequestDTO request) {
         if (userRepo.existsByUsername(request.getUsername())){
             throw new DuplicateResourceException("Username Already Exists");
@@ -64,6 +77,11 @@ public class ServiceImp implements UserService {
 
     private String hashPassword(String password) {
         return authConfig.passwordEncoder().encode(password);
+    }
+
+    private User getCurrentUser(UUID userId) {
+        return userRepo.findById(userId)
+                .orElseThrow(() -> new ValidationException("User not found"));
     }
 
     private User verifyUser(LoginRequestDTO request) {

@@ -1,23 +1,32 @@
 package com.example.CollabAuth.User.Security;
 
 import com.example.CollabAuth.OAuth.UserPrinciple;
+import com.example.CollabAuth.User.User;
+import com.example.CollabAuth.User.UserRepo;
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
 import java.time.Instant;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Component
 public class JwtUtils {
+
+    @Autowired
+    private UserRepo userRepo;
+
 
     @Value("${jwt.secret}")
     private String SECRET_KEY_STRING;
@@ -52,4 +61,20 @@ public class JwtUtils {
                 .claim("auth_provider", userPrinciple.getProvider())
                 .compact();
     }
+
+    public Authentication getAuthentication(String token) {
+        Claims claims = Jwts.parser().setSigningKey(secretKey).build().parseSignedClaims(token).getBody();
+        UUID userId = UUID.fromString(claims.getSubject());
+        User user = userRepo.findById(userId).orElseThrow(() -> new RuntimeException("User not found" ));
+        Collection<? extends GrantedAuthority> authorities = ((List<String>) claims.get("roles"))
+                .stream()
+                .map(SimpleGrantedAuthority::new)
+                .collect(Collectors.toList());
+        UserPrinciple userPrinciple = UserPrinciple.createByClaims(claims);
+        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
+                userPrinciple, token, userPrinciple.getAuthorities());
+        return usernamePasswordAuthenticationToken;
+    }
+
+
 }

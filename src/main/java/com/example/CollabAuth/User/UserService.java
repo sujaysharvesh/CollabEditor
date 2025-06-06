@@ -1,5 +1,6 @@
 package com.example.CollabAuth.User;
 
+import com.example.CollabAuth.OAuth.UserPrinciple;
 import com.example.CollabAuth.User.DTO.LoginRequestDTO;
 import com.example.CollabAuth.User.DTO.RegisterRequestDTO;
 import com.example.CollabAuth.User.DTO.UserResponseDTO;
@@ -11,5 +12,5 @@ public interface UserService {
 
     UserResponseDTO registerUser(RegisterRequestDTO registerRequestDTO);
     UserResponseDTO loginUser(LoginRequestDTO request);
-
+    UserResponseDTO currentUser(UserPrinciple userPrinciple);
 }
