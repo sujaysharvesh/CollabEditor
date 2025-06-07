@@ -56,7 +56,7 @@ public class JwtUtils {
                 .setSubject(userPrinciple.getId().toString())
                 .setIssuedAt(Date.from(now))
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))
-                .signWith(SignatureAlgorithm.HS256, secretKey)
+                .signWith(secretKey, SignatureAlgorithm.HS256)
                 .claim("email", userPrinciple.getEmail())
                 .claim("username", userPrinciple.getUsername())
                 .claim("roles", roles)
@@ -65,26 +65,27 @@ public class JwtUtils {
     }
 
     public Authentication getAuthentication(String token) {
-        Claims claims = Jwts.parser().setSigningKey(secretKey).build().parseSignedClaims(token).getBody();
-        UUID userId = UUID.fromString(claims.getSubject());
-        User user = userRepo.findById(userId).orElseThrow(() -> new RuntimeException("User not found" ));
-        Collection<? extends GrantedAuthority> authorities = ((List<String>) claims.get("roles"))
-                .stream()
-                .map(SimpleGrantedAuthority::new)
-                .collect(Collectors.toList());
+        Claims claims = Jwts.parser()
+                .setSigningKey(secretKey)
+                .build()
+                .parseSignedClaims(token)
+                .getBody();
         UserPrinciple userPrinciple = UserPrinciple.createByClaims(claims);
-        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
-                userPrinciple, token, userPrinciple.getAuthorities());
-        return usernamePasswordAuthenticationToken;
+        return new UsernamePasswordAuthenticationToken(
+                userPrinciple,
+                token,
+                userPrinciple.getAuthorities()
+        );
     }
 
     public boolean isValidToken(String token) {
         try {
-            Jwts.parser().setSigningKey(secretKey).build().parseSignedClaims(token);
+            Jwts.parser()
+                    .setSigningKey(secretKey)
+                    .build()
+                    .parseSignedClaims(token);
             return true;
-        } catch (JwtException e) {
-            return false;
-        } catch (Exception e) {
+        } catch (JwtException | IllegalArgumentException e) {
             return false;
         }
     }

@@ -11,6 +11,7 @@ import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 
 import java.security.AuthProvider;
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 @AllArgsConstructor
@@ -38,6 +39,7 @@ public class UserPrinciple implements OidcUser {
                 .email(user.getEmail())
                 .username(user.getUsername())
                 .provider(user.getProvider())
+                .authorities(authorityCollections)
                 .build();
     }
 
@@ -50,18 +52,24 @@ public class UserPrinciple implements OidcUser {
         }
         Collection<? extends GrantedAuthority> authorities1;
         try {
-            authorities1 = (((List<String>) claims.get("roles")))
-                    .stream().map(SimpleGrantedAuthority::new).toList();
+            List<String> roles = ((List<String>) claims.get("roles"));
+            if(roles != null && !roles.isEmpty()) {
+                authorities1 = roles.stream()
+                        .map(SimpleGrantedAuthority::new)
+                        .collect(Collectors.toList());
+            } else {
+                authorities1 = Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));
+            }
         } catch (Exception e) {
             authorities1 = Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));
         }
         return UserPrinciple.builder()
-                .id(UUID.fromString(claims.get("id", String.class)))
+                .id(UUID.fromString(claims.getSubject()))
                 .username(claims.get("username", String.class))
                 .email(claims.get("email", String.class))
                 .provider(authProvider)
                 .authorities(authorities1)
-                .attributes(claims)
+                .attributes(new HashMap<>(claims))
                 .build();
 
     }

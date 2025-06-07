@@ -21,10 +21,15 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
-                .csrf().disable()
+                .csrf(csrf -> csrf.disable())
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/**").permitAll())
+                        .requestMatchers("/api/v1/Auth/home",
+                                          "/api/v1/Auth/login",
+                                          "/api/v1/Auth/register").permitAll()
+                        .requestMatchers("/error").permitAll() // Allow error endpoint
+                        .requestMatchers("/api/v1/Auth/**").authenticated()
+                        .anyRequest().authenticated())
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return httpSecurity.build();
