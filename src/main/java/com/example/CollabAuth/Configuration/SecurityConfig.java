@@ -26,9 +26,12 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/v1/Auth/home",
                                           "/api/v1/Auth/login",
-                                          "/api/v1/Auth/register").permitAll()
+                                          "/api/v1/Auth/register",
+                                           "/api/v1/document/home").permitAll()
+                        .requestMatchers("/actuator/**").permitAll()
                         .requestMatchers("/error").permitAll() // Allow error endpoint
                         .requestMatchers("/api/v1/Auth/**").authenticated()
+                        .requestMatchers("/api/v1/document/**").authenticated()
                         .anyRequest().authenticated())
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
