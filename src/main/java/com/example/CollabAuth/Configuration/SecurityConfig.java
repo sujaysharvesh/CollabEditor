@@ -24,9 +24,9 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/v1/Auth/home",
-                                          "/api/v1/Auth/login",
-                                          "/api/v1/Auth/register",
+                        .requestMatchers("/api/v1/auth/home",
+                                          "/api/v1/auth/login",
+                                          "/api/v1/auth/register",
                                            "/api/v1/document/home").permitAll()
                         .requestMatchers("/actuator/**").permitAll()
                         .requestMatchers("/error").permitAll() // Allow error endpoint
