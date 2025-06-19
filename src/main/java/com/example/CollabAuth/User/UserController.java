@@ -1,11 +1,13 @@
 package com.example.CollabAuth.User;
 
 
+import brave.Response;
 import com.example.CollabAuth.ErrorHandler.GlobalExceptionHandler.*;
 import com.example.CollabAuth.OAuth.UserPrinciple;
 import com.example.CollabAuth.User.DTO.LoginRequestDTO;
 import com.example.CollabAuth.User.DTO.RegisterRequestDTO;
 import com.example.CollabAuth.User.DTO.UserResponseDTO;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +16,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 
 @RestController
@@ -29,6 +34,17 @@ public class UserController {
     @GetMapping("/home")
     public String home() {
         return "Welcome to the User Authentication Service!";
+    }
+
+    @GetMapping("/csrf")
+    public ResponseEntity<Map<String, Object>>getCsrfToken(HttpServletRequest request) {
+        CsrfToken csrfToken = (CsrfToken) request.getAttribute(CsrfToken.class.getName());
+        if (csrfToken == null) {
+            ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of("Error", "CSRF TOKEN NOT FOUND"));
+        }
+        return ResponseEntity.status(HttpStatus.OK)
+                .header(csrfToken.getHeaderName(), csrfToken.getToken())
+                .body(Map.of("Token", csrfToken));
     }
 
     @GetMapping("/me")
