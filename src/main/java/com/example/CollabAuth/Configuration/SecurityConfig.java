@@ -33,7 +33,7 @@ public class SecurityConfig {
                                            "/api/v1/document/home",
                                             "/api/v1/auth/csrf").permitAll()
                         .requestMatchers("/actuator/**").permitAll()
-                        .requestMatchers("/error").permitAll() // Allow error endpoint
+                        .requestMatchers("/error").permitAll()
                         .requestMatchers("/api/v1/Auth/**").authenticated()
                         .requestMatchers("/api/v1/document/**").authenticated()
                         .anyRequest().authenticated())
