@@ -7,12 +7,16 @@ import com.example.CollabAuth.OAuth.UserPrinciple;
 import com.example.CollabAuth.User.DTO.LoginRequestDTO;
 import com.example.CollabAuth.User.DTO.RegisterRequestDTO;
 import com.example.CollabAuth.User.DTO.UserResponseDTO;
+import com.example.CollabAuth.User.Security.CookieBuilder;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -28,8 +32,14 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class UserController {
 
-    @Autowired
     private UserService userService;
+    private CookieBuilder cookieBuilder;
+
+    @Autowired
+    public UserController(UserService userService, CookieBuilder cookieBuilder) {
+        this.userService = userService;
+        this.cookieBuilder = cookieBuilder;
+    }
 
     @GetMapping("/home")
     public String home() {
@@ -86,16 +96,26 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<ApiResponse<UserResponseDTO>> login(@Valid @RequestBody LoginRequestDTO request) {
+    public ResponseEntity<ApiResponse<UserResponseDTO>> login(@Valid @RequestBody LoginRequestDTO request,
+                                                              HttpServletRequest httpRequest,
+                                                              HttpServletResponse response) {
         try {
             UserResponseDTO user = userService.loginUser(request);
-            ApiResponse<UserResponseDTO> response = ApiResponse
+            cookieBuilder.setJwtCookie(response, user.getToken());
+            user.setToken(null);
+            ApiResponse<UserResponseDTO> apiResponse = ApiResponse
                     .success("User logged in successfully", user);
-            return ResponseEntity.ok(response);
+
+            return ResponseEntity.ok(apiResponse);
+
         } catch (ValidationException ex) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(ApiResponse.error(ex.getMessage()));
+            log.error("Login validation failed: {}", ex.getMessage());
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body(ApiResponse.error(ex.getMessage()));
         } catch (Exception ex) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ApiResponse.error(ex.getMessage()));
+            log.error("Login failed with unexpected error", ex);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(ApiResponse.error("An unexpected error occurred during login"));
         }
     }
 }

@@ -6,6 +6,7 @@ import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.JwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
@@ -68,6 +69,17 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             return authorizationHeader.substring(7);
         }
+
+        Cookie[] cookies = request.getCookies();
+        if(cookies!=null) {
+            for(Cookie cookie : cookies) {
+                if("jwt-token".equals(cookie.getName())) {
+                    log.info("JWT token extracted from cookie: {}", cookie.getName());
+                    return cookie.getValue();
+                }
+            }
+        }
+
         return null;
     }
 

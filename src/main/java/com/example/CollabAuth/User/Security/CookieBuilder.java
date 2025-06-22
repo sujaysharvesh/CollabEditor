@@ -1,10 +1,15 @@
 package com.example.CollabAuth.User.Security;
 
-
 import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseCookie;
 import org.springframework.stereotype.Component;
 
+@Slf4j
 @Component
 public class CookieBuilder {
 
@@ -23,17 +28,27 @@ public class CookieBuilder {
     @Value("${app.environment:development}")
     private String environment;
 
+    public void setJwtCookie(HttpServletResponse response, String token) {
+        log.info("Setting JWT cookie with token: {}", token != null ? ("present, length: " + token.length()) : "null");
 
-    public Cookie createJwtCookie(String token) {
-        Cookie cookie = new Cookie(jwtCookieName,token);
-        cookie.setHttpOnly(true);
-        cookie.setPath(cookiePath);
-        cookie.setMaxAge(cookieMaxAge);
+        boolean isProduction = isProduction();
+        boolean isSecure = isProduction;
 
-        if(!cookieDomain.isEmpty()) {
-            cookie.setDomain(cookieDomain);
+        ResponseCookie.ResponseCookieBuilder cookieBuilder = ResponseCookie.from(jwtCookieName, token)
+                .httpOnly(true)
+                .secure(isSecure)
+                .path(cookiePath)
+                .maxAge(cookieMaxAge)
+                .sameSite("Lax");
+
+        // Only set domain if specified and not localhost
+        if (!cookieDomain.isEmpty() && !cookieDomain.contains("localhost")) {
+            cookieBuilder.domain(cookieDomain);
         }
-        return cookie;
+
+        ResponseCookie responseCookie = cookieBuilder.build();
+        response.addHeader(HttpHeaders.SET_COOKIE, responseCookie.toString());
+
     }
 
     public Cookie createLogoutCookie() {
@@ -43,10 +58,10 @@ public class CookieBuilder {
         cookie.setPath(cookiePath);
         cookie.setMaxAge(0); // Expire immediately
 
-        if (!cookieDomain.isEmpty()) {
+        // Only set domain if specified and not localhost
+        if (!cookieDomain.isEmpty() && !cookieDomain.contains("localhost")) {
             cookie.setDomain(cookieDomain);
         }
-
         return cookie;
     }
 
@@ -57,7 +72,8 @@ public class CookieBuilder {
         cookie.setPath("/api/v1/auth/refresh");
         cookie.setMaxAge(604800); // 7 days
 
-        if (!cookieDomain.isEmpty()) {
+        // Only set domain if specified and not localhost
+        if (!cookieDomain.isEmpty() && !cookieDomain.contains("localhost")) {
             cookie.setDomain(cookieDomain);
         }
 
@@ -67,6 +83,4 @@ public class CookieBuilder {
     private boolean isProduction() {
         return "production".equalsIgnoreCase(environment);
     }
-
-
 }
