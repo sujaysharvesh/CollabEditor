@@ -36,8 +36,9 @@ public class SecurityConfig {
                                 "/api/v1/auth/register",
                                 "/api/v1/auth/refresh",
                                 "/actuator/**",
-                                "/api/v1/auth/**",
-                                "/actuator/**"
+                                "/api/v1/auth/me",
+                                "/actuator/**",
+                                "/api/v1/document/currentUser"
                         )
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -47,7 +48,8 @@ public class SecurityConfig {
                                 "/api/v1/auth/login",
                                 "/api/v1/auth/register",
                                 "/api/v1/auth/refresh",
-                                "/actuator/**"
+                                "/actuator/**",
+                                "/api/v1/auth/home"
                         ).permitAll()
                         .anyRequest().authenticated()
                 )

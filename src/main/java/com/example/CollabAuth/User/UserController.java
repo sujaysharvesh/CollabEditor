@@ -1,14 +1,12 @@
 package com.example.CollabAuth.User;
 
 
-import brave.Response;
 import com.example.CollabAuth.ErrorHandler.GlobalExceptionHandler.*;
 import com.example.CollabAuth.OAuth.UserPrinciple;
 import com.example.CollabAuth.User.DTO.LoginRequestDTO;
 import com.example.CollabAuth.User.DTO.RegisterRequestDTO;
 import com.example.CollabAuth.User.DTO.UserResponseDTO;
 import com.example.CollabAuth.User.Security.CookieBuilder;
-import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
