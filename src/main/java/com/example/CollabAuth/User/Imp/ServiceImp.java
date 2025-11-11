@@ -1,6 +1,7 @@
 package com.example.CollabAuth.User.Imp;
 
 import com.example.CollabAuth.Configuration.AuthConfig;
+import com.example.CollabAuth.Email.EmailClientService;
 import com.example.CollabAuth.ErrorHandler.GlobalExceptionHandler.*;
 import com.example.CollabAuth.OAuth.UserPrinciple;
 import com.example.CollabAuth.User.DTO.LoginRequestDTO;
@@ -12,6 +13,8 @@ import com.example.CollabAuth.User.UserMapper;
 import com.example.CollabAuth.User.UserRepo;
 import com.example.CollabAuth.User.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -25,8 +28,7 @@ public class ServiceImp implements UserService {
     private final UserRepo userRepo;
     private final AuthConfig authConfig;
     private final JwtUtils jwtUtils;
-
-
+    private final EmailClientService clientService;
 
     @Override
     public UserResponseDTO registerUser(RegisterRequestDTO request) {
@@ -40,6 +42,9 @@ public class ServiceImp implements UserService {
                 .createdAt(LocalDateTime.now())
                 .build();
         User savedUser = userRepo.save(user);
+
+        clientService.SendWelcomeMail(savedUser.getEmail(), savedUser.getUsername());
+
         return userMapper.toUserResponseDTO(savedUser);
     }
 
