@@ -2241,3 +2241,1037 @@ This generated password is for development use only. Your security configuration
 2025-11-20 20:57:13 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
 2025-11-20 20:57:13 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - deregister  status: 200
 2025-11-20 20:57:13 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-11-20 20:57:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 20:57:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 20:57:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 20:57:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 20:57:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 20:57:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-20 20:57:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 20:57:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 20:57:15 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - Re-registering apps/COLLAB-AUTH
+2025-11-20 20:57:15 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 20:57:15 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 20:59:21 [main] INFO  c.e.C.CollabAuthApplicationTests - Starting CollabAuthApplicationTests using Java 21.0.9 with PID 18740 (started by sujay in A:\collaborative-doc-editor\CollabAuth)
+2025-11-20 20:59:21 [main] DEBUG c.e.C.CollabAuthApplicationTests - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-11-20 20:59:21 [main] INFO  c.e.C.CollabAuthApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-20 20:59:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 20:59:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20 20:59:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 123 ms. Found 1 JPA repository interface.
+2025-11-20 20:59:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 20:59:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-20 20:59:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.CollabAuth.User.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-20 20:59:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-11-20 20:59:23 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a8e7d4aa-49d9-3a55-9e93-9b57e5a8aefc
+2025-11-20 20:59:24 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20 20:59:24 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-11-20 20:59:24 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-20 20:59:25 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20 20:59:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-20 20:59:25 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3835b281
+2025-11-20 20:59:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-20 20:59:25 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20 20:59:25 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20 20:59:26 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20 20:59:26 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 20:59:26 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-20 20:59:28 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20 20:59:28 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: e94f002f-6856-47ca-9ae6-4c26d9b630d6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-20 20:59:28 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-20 20:59:28 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-20 20:59:29 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-20 20:59:29 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-20 20:59:29 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-20 20:59:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-20 20:59:29 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 20:59:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 20:59:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 20:59:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 20:59:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 20:59:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 20:59:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-20 20:59:29 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 20:59:30 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 20:59:30 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-20 20:59:30 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-20 20:59:30 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763652570045 with initial instances count: 1
+2025-11-20 20:59:30 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application COLLAB-AUTH with eureka with status UP
+2025-11-20 20:59:30 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763652570050, current=UP, previous=STARTING]
+2025-11-20 20:59:30 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 20:59:30 [main] INFO  c.e.C.CollabAuthApplicationTests - Started CollabAuthApplicationTests in 8.797 seconds (process running for 10.53)
+2025-11-20 20:59:30 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 20:59:30 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application COLLAB-AUTH with eureka with status DOWN
+2025-11-20 20:59:30 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763652570690, current=DOWN, previous=UP]
+2025-11-20 20:59:30 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 20:59:30 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 20:59:30 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 20:59:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-20 20:59:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-20 20:59:30 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-20 20:59:33 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-11-20 20:59:33 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - deregister  status: 200
+2025-11-20 20:59:33 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-11-20 20:59:45 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - Re-registering apps/COLLAB-AUTH
+2025-11-20 20:59:45 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 20:59:45 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:00:03 [main] INFO  c.e.C.CollabAuthApplicationTests - Starting CollabAuthApplicationTests using Java 21.0.8 with PID 19816 (started by sujay in A:\collaborative-doc-editor\CollabAuth)
+2025-11-20 21:00:03 [main] DEBUG c.e.C.CollabAuthApplicationTests - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-11-20 21:00:03 [main] INFO  c.e.C.CollabAuthApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-20 21:00:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:00:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20 21:00:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 128 ms. Found 1 JPA repository interface.
+2025-11-20 21:00:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:00:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-20 21:00:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.CollabAuth.User.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-20 21:00:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-11-20 21:00:05 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a8e7d4aa-49d9-3a55-9e93-9b57e5a8aefc
+2025-11-20 21:00:05 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20 21:00:05 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-11-20 21:00:05 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-20 21:00:06 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20 21:00:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-20 21:00:06 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5e3cb58e
+2025-11-20 21:00:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-20 21:00:06 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20 21:00:06 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20 21:00:07 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20 21:00:07 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:00:07 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-20 21:00:09 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20 21:00:09 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 1a4f9845-f130-4b66-9928-4cb7d56fc3e7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-20 21:00:09 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-20 21:00:10 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-20 21:00:11 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-20 21:00:11 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-20 21:00:11 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-20 21:00:12 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-20 21:00:12 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:00:12 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:00:12 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:00:12 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:00:12 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:00:12 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:00:12 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-20 21:00:12 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:00:13 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:00:13 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-20 21:00:13 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-20 21:00:13 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763652613084 with initial instances count: 1
+2025-11-20 21:00:13 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application COLLAB-AUTH with eureka with status UP
+2025-11-20 21:00:13 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763652613094, current=UP, previous=STARTING]
+2025-11-20 21:00:13 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:00:13 [main] INFO  c.e.C.CollabAuthApplicationTests - Started CollabAuthApplicationTests in 10.276 seconds (process running for 11.78)
+2025-11-20 21:00:13 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:00:14 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application COLLAB-AUTH with eureka with status DOWN
+2025-11-20 21:00:14 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763652614103, current=DOWN, previous=UP]
+2025-11-20 21:00:14 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:00:14 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:00:14 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:00:14 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-20 21:00:14 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-20 21:00:14 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-20 21:00:17 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-11-20 21:00:17 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - deregister  status: 200
+2025-11-20 21:00:17 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-11-20 21:00:45 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - Re-registering apps/COLLAB-AUTH
+2025-11-20 21:00:45 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:00:45 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:00:55 [main] INFO  c.e.C.CollabAuthApplicationTests - Starting CollabAuthApplicationTests using Java 21.0.9 with PID 16116 (started by sujay in A:\collaborative-doc-editor\CollabAuth)
+2025-11-20 21:00:55 [main] DEBUG c.e.C.CollabAuthApplicationTests - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-11-20 21:00:55 [main] INFO  c.e.C.CollabAuthApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-20 21:00:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:00:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20 21:00:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 140 ms. Found 1 JPA repository interface.
+2025-11-20 21:00:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:00:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-20 21:00:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.CollabAuth.User.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-20 21:00:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-11-20 21:00:56 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a8e7d4aa-49d9-3a55-9e93-9b57e5a8aefc
+2025-11-20 21:00:57 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20 21:00:57 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-11-20 21:00:57 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-20 21:00:58 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20 21:00:58 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-20 21:00:58 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@62a41279
+2025-11-20 21:00:58 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-20 21:00:58 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20 21:00:58 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20 21:00:59 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20 21:00:59 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:00:59 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-20 21:01:01 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20 21:01:01 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b65bfce9-3333-4897-b0dc-fa3839cf4761
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-20 21:01:01 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-20 21:01:01 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-20 21:01:02 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-20 21:01:02 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-20 21:01:02 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-20 21:01:02 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-20 21:01:02 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:01:02 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:01:02 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:01:02 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:01:02 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:01:02 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:01:02 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-20 21:01:02 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:01:03 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:01:03 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-20 21:01:03 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-20 21:01:03 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763652663141 with initial instances count: 1
+2025-11-20 21:01:03 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application COLLAB-AUTH with eureka with status UP
+2025-11-20 21:01:03 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763652663146, current=UP, previous=STARTING]
+2025-11-20 21:01:03 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:01:03 [main] INFO  c.e.C.CollabAuthApplicationTests - Started CollabAuthApplicationTests in 8.665 seconds (process running for 10.255)
+2025-11-20 21:01:03 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:01:03 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application COLLAB-AUTH with eureka with status DOWN
+2025-11-20 21:01:03 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763652663607, current=DOWN, previous=UP]
+2025-11-20 21:01:03 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:01:03 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:01:03 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:01:03 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-20 21:01:03 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-20 21:01:03 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-20 21:01:06 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-11-20 21:01:06 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - deregister  status: 200
+2025-11-20 21:01:06 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-11-20 21:01:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:01:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:01:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:01:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:01:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:01:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-20 21:01:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:01:15 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:01:15 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - Re-registering apps/COLLAB-AUTH
+2025-11-20 21:01:15 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:01:15 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:01:44 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:02:08 [main] INFO  c.e.C.CollabAuthApplicationTests - Starting CollabAuthApplicationTests using Java 21.0.9 with PID 11764 (started by sujay in A:\collaborative-doc-editor\CollabAuth)
+2025-11-20 21:02:08 [main] DEBUG c.e.C.CollabAuthApplicationTests - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-11-20 21:02:08 [main] INFO  c.e.C.CollabAuthApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-20 21:02:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:02:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20 21:02:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 258 ms. Found 1 JPA repository interface.
+2025-11-20 21:02:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:02:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-20 21:02:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.CollabAuth.User.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-20 21:02:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2025-11-20 21:02:11 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a8e7d4aa-49d9-3a55-9e93-9b57e5a8aefc
+2025-11-20 21:02:12 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20 21:02:12 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-11-20 21:02:12 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-20 21:02:13 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20 21:02:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-20 21:02:13 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7bef7505
+2025-11-20 21:02:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-20 21:02:13 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20 21:02:13 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20 21:02:14 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20 21:02:15 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:02:15 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-20 21:02:17 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20 21:02:18 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: a63428f7-f1b1-448e-8243-cbb4ce9dbd79
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-20 21:02:18 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-20 21:02:18 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-20 21:02:19 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-20 21:02:19 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-20 21:02:19 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-20 21:02:19 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-20 21:02:19 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:02:19 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:02:19 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:02:19 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:02:19 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:02:19 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:02:19 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-20 21:02:19 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:02:19 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:02:19 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-20 21:02:19 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-20 21:02:19 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763652739867 with initial instances count: 1
+2025-11-20 21:02:19 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application COLLAB-AUTH with eureka with status UP
+2025-11-20 21:02:19 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763652739876, current=UP, previous=STARTING]
+2025-11-20 21:02:19 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:02:19 [main] INFO  c.e.C.CollabAuthApplicationTests - Started CollabAuthApplicationTests in 11.632 seconds (process running for 13.312)
+2025-11-20 21:02:20 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:02:20 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application COLLAB-AUTH with eureka with status DOWN
+2025-11-20 21:02:20 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763652740462, current=DOWN, previous=UP]
+2025-11-20 21:02:20 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:02:20 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:02:20 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:02:20 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-20 21:02:20 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-20 21:02:20 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-20 21:02:23 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-11-20 21:02:23 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - deregister  status: 200
+2025-11-20 21:02:23 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-11-20 21:02:35 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application COLLAB-AUTH with eureka with status DOWN
+2025-11-20 21:02:35 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763652755624, current=DOWN, previous=UP]
+2025-11-20 21:02:35 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:02:35 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:02:35 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-20 21:02:35 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-20 21:02:35 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:02:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-20 21:02:36 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-20 21:02:36 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-20 21:02:39 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-11-20 21:02:39 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - deregister  status: 200
+2025-11-20 21:02:39 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-11-20 21:02:44 [main] INFO  c.e.CollabAuth.CollabAuthApplication - Starting CollabAuthApplication using Java 24.0.2 with PID 20988 (A:\collaborative-doc-editor\CollabAuth\target\classes started by sujay in A:\collaborative-doc-editor\CollabAuth)
+2025-11-20 21:02:44 [main] DEBUG c.e.CollabAuth.CollabAuthApplication - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-11-20 21:02:44 [main] INFO  c.e.CollabAuth.CollabAuthApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-20 21:02:46 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:02:46 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20 21:02:46 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 128 ms. Found 1 JPA repository interface.
+2025-11-20 21:02:46 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:02:46 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-20 21:02:46 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.CollabAuth.User.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-20 21:02:46 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-11-20 21:02:47 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=3ced2eff-8a85-3889-bd43-dbad38b3f44f
+2025-11-20 21:02:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 4001 (http)
+2025-11-20 21:02:47 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-20 21:02:47 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-11-20 21:02:48 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-20 21:02:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3005 ms
+2025-11-20 21:02:48 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20 21:02:48 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-11-20 21:02:48 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-20 21:02:48 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20 21:02:48 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-20 21:02:48 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@25ea068e
+2025-11-20 21:02:48 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-20 21:02:48 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20 21:02:48 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20 21:02:49 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20 21:02:49 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:02:50 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-20 21:02:51 [main] DEBUG c.e.C.U.S.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-11-20 21:02:51 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20 21:02:51 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 8130db6b-f40c-49b9-9402-422397d303f0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-20 21:02:51 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-20 21:02:51 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-20 21:02:52 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-20 21:02:52 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-20 21:02:52 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-20 21:02:52 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-20 21:02:52 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:02:52 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:02:52 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:02:52 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:02:52 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:02:52 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:02:52 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-20 21:02:52 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:02:53 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:02:53 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-20 21:02:53 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-20 21:02:53 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763652773041 with initial instances count: 0
+2025-11-20 21:02:53 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application COLLAB-AUTH with eureka with status UP
+2025-11-20 21:02:53 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763652773044, current=UP, previous=STARTING]
+2025-11-20 21:02:53 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:02:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 4001 (http) with context path '/'
+2025-11-20 21:02:53 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 4001
+2025-11-20 21:02:53 [main] INFO  c.e.CollabAuth.CollabAuthApplication - Started CollabAuthApplication in 9.141 seconds (process running for 10.477)
+2025-11-20 21:02:53 [main] INFO  c.e.CollabAuth.CollabAuthApplication - Application running successfully on port 4001
+2025-11-20 21:02:53 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:03:19 [main] INFO  c.e.C.CollabAuthApplicationTests - Starting CollabAuthApplicationTests using Java 21.0.9 with PID 18804 (started by sujay in A:\collaborative-doc-editor\CollabAuth)
+2025-11-20 21:03:19 [main] DEBUG c.e.C.CollabAuthApplicationTests - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-11-20 21:03:19 [main] INFO  c.e.C.CollabAuthApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-20 21:03:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:03:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20 21:03:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 146 ms. Found 1 JPA repository interface.
+2025-11-20 21:03:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:03:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-20 21:03:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.CollabAuth.User.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-20 21:03:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-11-20 21:03:21 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a8e7d4aa-49d9-3a55-9e93-9b57e5a8aefc
+2025-11-20 21:03:22 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20 21:03:22 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-11-20 21:03:22 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-20 21:03:22 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20 21:03:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-20 21:03:22 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@62a41279
+2025-11-20 21:03:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-20 21:03:22 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20 21:03:22 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20 21:03:23 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:03:23 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:03:23 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:03:23 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:03:23 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:03:23 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-20 21:03:23 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:03:23 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:03:23 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20 21:03:23 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:03:24 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-20 21:03:25 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20 21:03:26 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 1e1c2750-4aa6-42a8-bbc9-b19522febea6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-20 21:03:26 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-20 21:03:26 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-20 21:03:26 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-20 21:03:26 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-20 21:03:26 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-20 21:03:26 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-20 21:03:26 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:03:26 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:03:26 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:03:26 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:03:26 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:03:26 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:03:26 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-20 21:03:26 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:03:27 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:03:27 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-20 21:03:27 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-20 21:03:27 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763652807392 with initial instances count: 1
+2025-11-20 21:03:27 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application COLLAB-AUTH with eureka with status UP
+2025-11-20 21:03:27 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763652807395, current=UP, previous=STARTING]
+2025-11-20 21:03:27 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:03:27 [main] INFO  c.e.C.CollabAuthApplicationTests - Started CollabAuthApplicationTests in 8.673 seconds (process running for 10.115)
+2025-11-20 21:03:27 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:03:27 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application COLLAB-AUTH with eureka with status DOWN
+2025-11-20 21:03:27 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763652807881, current=DOWN, previous=UP]
+2025-11-20 21:03:27 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:03:27 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:03:27 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:03:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-20 21:03:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-20 21:03:27 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-20 21:03:30 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-11-20 21:03:30 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - deregister  status: 200
+2025-11-20 21:03:31 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-11-20 21:03:53 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - Re-registering apps/COLLAB-AUTH
+2025-11-20 21:03:53 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:03:53 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:06:23 [main] INFO  c.e.C.CollabAuthApplicationTests - Starting CollabAuthApplicationTests using Java 21.0.9 with PID 19432 (started by sujay in A:\collaborative-doc-editor\CollabAuth)
+2025-11-20 21:06:23 [main] DEBUG c.e.C.CollabAuthApplicationTests - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-11-20 21:06:23 [main] INFO  c.e.C.CollabAuthApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-20 21:06:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:06:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20 21:06:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 180 ms. Found 1 JPA repository interface.
+2025-11-20 21:06:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:06:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-20 21:06:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.CollabAuth.User.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-20 21:06:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2025-11-20 21:06:25 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a8e7d4aa-49d9-3a55-9e93-9b57e5a8aefc
+2025-11-20 21:06:26 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20 21:06:26 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-11-20 21:06:26 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-20 21:06:27 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20 21:06:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-20 21:06:27 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7bef7505
+2025-11-20 21:06:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-20 21:06:27 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20 21:06:27 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20 21:06:28 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20 21:06:29 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:06:29 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-20 21:06:31 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20 21:06:32 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b76ea2a8-4610-4b60-87da-56f6366d544e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-20 21:06:32 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-20 21:06:32 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-20 21:06:33 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-20 21:06:33 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-20 21:06:33 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-20 21:06:33 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-20 21:06:33 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:06:33 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:06:33 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:06:33 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:06:33 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:06:33 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:06:33 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-20 21:06:33 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:06:33 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:06:33 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-20 21:06:33 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-20 21:06:33 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763652993770 with initial instances count: 1
+2025-11-20 21:06:33 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application COLLAB-AUTH with eureka with status UP
+2025-11-20 21:06:33 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763652993773, current=UP, previous=STARTING]
+2025-11-20 21:06:33 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:06:33 [main] INFO  c.e.C.CollabAuthApplicationTests - Started CollabAuthApplicationTests in 10.848 seconds (process running for 12.619)
+2025-11-20 21:06:33 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:06:34 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application COLLAB-AUTH with eureka with status DOWN
+2025-11-20 21:06:34 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763652994263, current=DOWN, previous=UP]
+2025-11-20 21:06:34 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:06:34 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:06:34 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:06:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-20 21:06:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-20 21:06:34 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-20 21:06:37 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-11-20 21:06:37 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - deregister  status: 200
+2025-11-20 21:06:37 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-11-20 21:06:53 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - Re-registering apps/COLLAB-AUTH
+2025-11-20 21:06:53 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:06:53 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:07:00 [main] INFO  c.e.C.CollabAuthApplicationTests - Starting CollabAuthApplicationTests using Java 21.0.9 with PID 21076 (started by sujay in A:\collaborative-doc-editor\CollabAuth)
+2025-11-20 21:07:00 [main] DEBUG c.e.C.CollabAuthApplicationTests - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-11-20 21:07:00 [main] INFO  c.e.C.CollabAuthApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-20 21:07:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:07:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20 21:07:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 125 ms. Found 1 JPA repository interface.
+2025-11-20 21:07:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:07:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-20 21:07:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.CollabAuth.User.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-20 21:07:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-11-20 21:07:02 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a8e7d4aa-49d9-3a55-9e93-9b57e5a8aefc
+2025-11-20 21:07:03 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20 21:07:03 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-11-20 21:07:03 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-20 21:07:03 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20 21:07:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-20 21:07:04 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7bef7505
+2025-11-20 21:07:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-20 21:07:04 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20 21:07:04 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20 21:07:05 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20 21:07:05 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:07:06 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-20 21:07:08 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20 21:07:09 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 121131d6-4b4f-47d7-aec4-61d9889b66ee
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-20 21:07:09 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-20 21:07:09 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-20 21:07:10 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-20 21:07:10 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-20 21:07:10 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-20 21:07:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-20 21:07:10 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:07:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:07:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:07:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:07:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:07:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:07:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-20 21:07:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:07:10 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:07:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-20 21:07:10 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-20 21:07:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763653030900 with initial instances count: 1
+2025-11-20 21:07:10 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application COLLAB-AUTH with eureka with status UP
+2025-11-20 21:07:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763653030905, current=UP, previous=STARTING]
+2025-11-20 21:07:10 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:07:10 [main] INFO  c.e.C.CollabAuthApplicationTests - Started CollabAuthApplicationTests in 11.3 seconds (process running for 12.682)
+2025-11-20 21:07:10 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:07:11 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application COLLAB-AUTH with eureka with status DOWN
+2025-11-20 21:07:11 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763653031439, current=DOWN, previous=UP]
+2025-11-20 21:07:11 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:07:11 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:07:11 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:07:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-20 21:07:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-20 21:07:11 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-20 21:07:14 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-11-20 21:07:14 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - deregister  status: 200
+2025-11-20 21:07:14 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-11-20 21:07:23 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - Re-registering apps/COLLAB-AUTH
+2025-11-20 21:07:23 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:07:23 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:07:52 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:12:52 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:17:52 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:19:02 [main] INFO  c.e.C.CollabAuthApplicationTests - Starting CollabAuthApplicationTests using Java 21.0.9 with PID 12216 (started by sujay in A:\collaborative-doc-editor\CollabAuth)
+2025-11-20 21:19:02 [main] DEBUG c.e.C.CollabAuthApplicationTests - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-11-20 21:19:02 [main] INFO  c.e.C.CollabAuthApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-20 21:19:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:19:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20 21:19:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 144 ms. Found 1 JPA repository interface.
+2025-11-20 21:19:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:19:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-20 21:19:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.CollabAuth.User.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-20 21:19:04 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2025-11-20 21:19:04 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a8e7d4aa-49d9-3a55-9e93-9b57e5a8aefc
+2025-11-20 21:19:05 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20 21:19:05 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-11-20 21:19:05 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-20 21:19:05 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20 21:19:05 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-20 21:19:06 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3e2d65e1
+2025-11-20 21:19:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-20 21:19:06 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20 21:19:06 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20 21:19:07 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20 21:19:07 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:19:07 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-20 21:19:09 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20 21:19:09 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 036a314e-9ed3-461c-8ba8-c167d71f2ebf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-20 21:19:09 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-20 21:19:09 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-20 21:19:10 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-20 21:19:10 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-20 21:19:10 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-20 21:19:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-20 21:19:10 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:19:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:19:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:19:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:19:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:19:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:19:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-20 21:19:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:19:10 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:19:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-20 21:19:10 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-20 21:19:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763653750826 with initial instances count: 1
+2025-11-20 21:19:10 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application COLLAB-AUTH with eureka with status UP
+2025-11-20 21:19:10 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763653750830, current=UP, previous=STARTING]
+2025-11-20 21:19:10 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:19:10 [main] INFO  c.e.C.CollabAuthApplicationTests - Started CollabAuthApplicationTests in 8.511 seconds (process running for 10.036)
+2025-11-20 21:19:10 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:19:11 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application COLLAB-AUTH with eureka with status DOWN
+2025-11-20 21:19:11 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763653751350, current=DOWN, previous=UP]
+2025-11-20 21:19:11 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:19:11 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:19:11 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:19:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-20 21:19:11 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-20 21:19:11 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-20 21:19:14 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-11-20 21:19:14 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - deregister  status: 200
+2025-11-20 21:19:14 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-11-20 21:19:23 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - Re-registering apps/COLLAB-AUTH
+2025-11-20 21:19:23 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:19:23 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:20:20 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application COLLAB-AUTH with eureka with status DOWN
+2025-11-20 21:20:20 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763653820150, current=DOWN, previous=UP]
+2025-11-20 21:20:20 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:20:20 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:20:20 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-20 21:20:20 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-20 21:20:20 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:20:20 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-20 21:20:20 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-20 21:20:20 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-20 21:20:23 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-11-20 21:20:23 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - deregister  status: 200
+2025-11-20 21:20:23 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-11-20 21:20:26 [main] INFO  c.e.CollabAuth.CollabAuthApplication - Starting CollabAuthApplication using Java 24.0.2 with PID 20832 (A:\collaborative-doc-editor\CollabAuth\target\classes started by sujay in A:\collaborative-doc-editor\CollabAuth)
+2025-11-20 21:20:26 [main] DEBUG c.e.CollabAuth.CollabAuthApplication - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-11-20 21:20:26 [main] INFO  c.e.CollabAuth.CollabAuthApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-20 21:20:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:20:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20 21:20:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 127 ms. Found 1 JPA repository interface.
+2025-11-20 21:20:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:20:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-20 21:20:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.CollabAuth.User.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-20 21:20:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-11-20 21:20:28 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=3ced2eff-8a85-3889-bd43-dbad38b3f44f
+2025-11-20 21:20:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 4001 (http)
+2025-11-20 21:20:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-20 21:20:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-11-20 21:20:29 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-20 21:20:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2723 ms
+2025-11-20 21:20:29 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20 21:20:29 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-11-20 21:20:30 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-20 21:20:30 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20 21:20:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-20 21:20:30 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7b64bbad
+2025-11-20 21:20:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-20 21:20:30 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20 21:20:30 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20 21:20:31 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20 21:20:31 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:20:32 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-20 21:20:32 [main] DEBUG c.e.C.U.S.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-11-20 21:20:33 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20 21:20:33 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: c8d022c1-3244-43d2-b931-994a5e57e816
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-20 21:20:33 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-20 21:20:33 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-20 21:20:34 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-20 21:20:34 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-20 21:20:34 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-20 21:20:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-20 21:20:34 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:20:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:20:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:20:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:20:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:20:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:20:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-20 21:20:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:20:34 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:20:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-20 21:20:34 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-20 21:20:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763653834697 with initial instances count: 0
+2025-11-20 21:20:34 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application COLLAB-AUTH with eureka with status UP
+2025-11-20 21:20:34 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763653834703, current=UP, previous=STARTING]
+2025-11-20 21:20:34 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:20:34 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 4001 (http) with context path '/'
+2025-11-20 21:20:34 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 4001
+2025-11-20 21:20:34 [main] INFO  c.e.CollabAuth.CollabAuthApplication - Started CollabAuthApplication in 8.766 seconds (process running for 9.502)
+2025-11-20 21:20:34 [main] INFO  c.e.CollabAuth.CollabAuthApplication - Application running successfully on port 4001
+2025-11-20 21:20:34 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:21:04 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:21:04 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:21:04 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:21:04 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:21:04 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:21:04 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-20 21:21:04 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:21:04 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:23:29 [main] INFO  c.e.C.CollabAuthApplicationTests - Starting CollabAuthApplicationTests using Java 21.0.9 with PID 19932 (started by sujay in A:\collaborative-doc-editor\CollabAuth)
+2025-11-20 21:23:29 [main] DEBUG c.e.C.CollabAuthApplicationTests - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-11-20 21:23:29 [main] INFO  c.e.C.CollabAuthApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-20 21:23:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:23:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20 21:23:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 176 ms. Found 1 JPA repository interface.
+2025-11-20 21:23:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:23:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-20 21:23:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.CollabAuth.User.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-20 21:23:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-11-20 21:23:31 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a8e7d4aa-49d9-3a55-9e93-9b57e5a8aefc
+2025-11-20 21:23:31 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20 21:23:32 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-11-20 21:23:32 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-20 21:23:32 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20 21:23:32 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-20 21:23:32 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41bbb219
+2025-11-20 21:23:32 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-20 21:23:32 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20 21:23:32 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20 21:23:33 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20 21:23:33 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:23:34 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-20 21:23:35 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20 21:23:35 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: cdf42553-0e77-49da-bda6-14d4e205d95c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-20 21:23:35 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-20 21:23:35 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-20 21:23:36 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-20 21:23:36 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-20 21:23:36 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-20 21:23:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-20 21:23:36 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:23:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:23:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:23:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:23:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:23:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:23:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-20 21:23:36 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:23:37 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:23:37 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-20 21:23:37 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-20 21:23:37 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763654017183 with initial instances count: 1
+2025-11-20 21:23:37 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application COLLAB-AUTH with eureka with status UP
+2025-11-20 21:23:37 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763654017188, current=UP, previous=STARTING]
+2025-11-20 21:23:37 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:23:37 [main] INFO  c.e.C.CollabAuthApplicationTests - Started CollabAuthApplicationTests in 8.455 seconds (process running for 9.986)
+2025-11-20 21:23:37 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:23:38 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-20 21:23:38 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-20 21:23:38 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-11-20 21:23:38 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application COLLAB-AUTH with eureka with status DOWN
+2025-11-20 21:23:38 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763654018345, current=DOWN, previous=UP]
+2025-11-20 21:23:38 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:23:38 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:23:38 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:23:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-20 21:23:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-20 21:23:38 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-20 21:23:41 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-11-20 21:23:41 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - deregister  status: 200
+2025-11-20 21:23:41 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-11-20 21:24:05 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - Re-registering apps/COLLAB-AUTH
+2025-11-20 21:24:05 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:24:05 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:24:32 [main] INFO  c.e.C.CollabAuthApplicationTests - Starting CollabAuthApplicationTests using Java 21.0.9 with PID 1364 (started by sujay in A:\collaborative-doc-editor\CollabAuth)
+2025-11-20 21:24:32 [main] DEBUG c.e.C.CollabAuthApplicationTests - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-11-20 21:24:32 [main] INFO  c.e.C.CollabAuthApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-20 21:24:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:24:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20 21:24:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 259 ms. Found 1 JPA repository interface.
+2025-11-20 21:24:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:24:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:24:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:24:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:24:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:24:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-20 21:24:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:24:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:24:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:24:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-20 21:24:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.CollabAuth.User.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-20 21:24:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2025-11-20 21:24:36 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a8e7d4aa-49d9-3a55-9e93-9b57e5a8aefc
+2025-11-20 21:24:38 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20 21:24:38 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-11-20 21:24:38 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-20 21:24:39 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20 21:24:39 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-20 21:24:39 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41bbb219
+2025-11-20 21:24:39 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-20 21:24:39 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20 21:24:39 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20 21:24:41 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20 21:24:41 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:24:42 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-20 21:24:45 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20 21:24:46 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 4a838db3-de25-411e-a3be-7ea8d670e4cf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-20 21:24:46 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-20 21:24:46 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-20 21:24:48 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-20 21:24:48 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-20 21:24:48 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-20 21:24:48 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-20 21:24:48 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:24:48 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:24:48 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:24:48 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:24:48 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:24:48 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:24:48 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-20 21:24:48 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:24:49 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:24:49 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-20 21:24:49 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-20 21:24:49 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763654089610 with initial instances count: 1
+2025-11-20 21:24:49 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application COLLAB-AUTH with eureka with status UP
+2025-11-20 21:24:49 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763654089616, current=UP, previous=STARTING]
+2025-11-20 21:24:49 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:24:49 [main] INFO  c.e.C.CollabAuthApplicationTests - Started CollabAuthApplicationTests in 18.867 seconds (process running for 22.201)
+2025-11-20 21:24:49 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:24:52 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-11-20 21:24:52 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-11-20 21:24:52 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-11-20 21:24:52 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application COLLAB-AUTH with eureka with status DOWN
+2025-11-20 21:24:52 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763654092631, current=DOWN, previous=UP]
+2025-11-20 21:24:52 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:24:52 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:24:52 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:24:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-20 21:24:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-20 21:24:52 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-20 21:24:55 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-11-20 21:24:55 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - deregister  status: 200
+2025-11-20 21:24:55 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2025-11-20 21:25:05 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - Re-registering apps/COLLAB-AUTH
+2025-11-20 21:25:05 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:25:05 [DiscoveryClient-HeartbeatExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:25:25 [main] INFO  c.e.C.CollabAuthApplicationTests - Starting CollabAuthApplicationTests using Java 21.0.9 with PID 20164 (started by sujay in A:\collaborative-doc-editor\CollabAuth)
+2025-11-20 21:25:25 [main] DEBUG c.e.C.CollabAuthApplicationTests - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-11-20 21:25:25 [main] INFO  c.e.C.CollabAuthApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-20 21:25:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:25:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20 21:25:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 119 ms. Found 1 JPA repository interface.
+2025-11-20 21:25:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-20 21:25:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-20 21:25:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.CollabAuth.User.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-20 21:25:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2025-11-20 21:25:27 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a8e7d4aa-49d9-3a55-9e93-9b57e5a8aefc
+2025-11-20 21:25:27 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20 21:25:27 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-11-20 21:25:27 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-20 21:25:28 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20 21:25:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-20 21:25:28 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1987807b
+2025-11-20 21:25:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-20 21:25:28 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20 21:25:28 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-20 21:25:29 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20 21:25:29 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:25:29 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-20 21:25:31 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20 21:25:31 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 18108d69-62fa-433d-b335-f4e41edd5a68
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-20 21:25:31 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-20 21:25:31 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-20 21:25:32 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-11-20 21:25:32 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-20 21:25:32 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-11-20 21:25:32 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-11-20 21:25:32 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:25:32 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:25:32 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:25:32 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:25:32 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:25:32 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:25:32 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-11-20 21:25:32 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:25:33 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:25:33 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-11-20 21:25:33 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-20 21:25:33 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1763654133051 with initial instances count: 1
+2025-11-20 21:25:33 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application COLLAB-AUTH with eureka with status UP
+2025-11-20 21:25:33 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763654133055, current=UP, previous=STARTING]
+2025-11-20 21:25:33 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:25:33 [main] INFO  c.e.C.CollabAuthApplicationTests - Started CollabAuthApplicationTests in 8.423 seconds (process running for 10.184)
+2025-11-20 21:25:33 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:25:33 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application COLLAB-AUTH with eureka with status DOWN
+2025-11-20 21:25:33 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1763654133982, current=DOWN, previous=UP]
+2025-11-20 21:25:33 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001: registering service...
+2025-11-20 21:25:33 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - registration status: 204
+2025-11-20 21:25:34 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 21:25:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-20 21:25:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-20 21:25:34 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-11-20 21:25:34 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-11-20 21:25:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-11-20 21:25:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-11-20 21:25:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-11-20 21:25:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-11-20 21:25:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-11-20 21:25:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2025-11-20 21:25:34 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-11-20 21:25:35 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-11-20 21:25:37 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-11-20 21:25:37 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_COLLAB-AUTH/collab-auth:4001 - deregister  status: 200
+2025-11-20 21:25:37 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

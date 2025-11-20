@@ -40,8 +40,8 @@ public class UserController {
     }
 
     @GetMapping("/home")
-    public String home() {
-        return "Welcome to the User Authentication Service!";
+    public ResponseEntity<String> home() {
+        return ResponseEntity.ok("Welcome to the User Authentication Service!");
     }
 
     @GetMapping("/csrf")
