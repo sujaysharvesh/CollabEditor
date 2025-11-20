@@ -23,6 +23,8 @@ import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import java.util.UUID;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -61,5 +63,49 @@ class UserControllerTest {
         mockMvc.perform(get("/api/v1/auth/home"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Welcome to the User Authentication Service!"));
+    }
+
+    @Test
+    void testGetCsrfToken_ShouldReturnCsrfToken() throws Exception {
+        CsrfToken csrfToken = mock(CsrfToken.class);
+        when(csrfToken.getHeaderName()).thenReturn("X-CSRF-TOKEN");
+        when(csrfToken.getToken()).thenReturn("test-csrf-token");
+
+        mockMvc.perform(get("/api/v1/auth/csrf")
+                        .requestAttr(CsrfToken.class.getName(), csrfToken))
+                .andExpect(status().isOk())
+                .andExpect(header().string("X-CSRF-TOKEN", "test-csrf-token"))
+                .andExpect(jsonPath("$.Token").exists());
+    }
+
+    @Test
+    void testCurrentUser_WhenAuthenticated_ShouldReturnUser() throws Exception {
+        UserPrinciple userPrinciple = mock(UserPrinciple.class);
+        UserResponseDTO userResponse = new UserResponseDTO();
+        userResponse.setId(UUID.fromString("testUser"));
+        userResponse.setEmail("test@example.com");
+        userResponse.setUsername("testuser");
+
+        when(securityContext.getAuthentication()).thenReturn(authentication);
+        when(authentication.isAuthenticated()).thenReturn(true);
+        when(authentication.getPrincipal()).thenReturn(userPrinciple);
+        when(userService.currentUser(userPrinciple)).thenReturn(userResponse);
+
+        mockMvc.perform(get("/api/v1/auth/me"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.success").value(true))
+                .andExpect(jsonPath("$.message").value("Current user retrieved successfully"))
+                .andExpect(jsonPath("$.data.email").value("test@example.com"))
+                .andExpect(jsonPath("$.data.username").value("testuser"));
+    }
+
+    @Test
+    void testCurrentUser_WhenNotAuthenticated_ShouldReturnUnauthorized() throws Exception {
+        when(securityContext.getAuthentication()).thenReturn(null);
+
+        mockMvc.perform(get("/api/v1/auth/me"))
+                .andExpect(status().isUnauthorized())
+                .andExpect(jsonPath("$.success").value(false))
+                .andExpect(jsonPath("$.message").value("User not authenticated"));
     }
 }
