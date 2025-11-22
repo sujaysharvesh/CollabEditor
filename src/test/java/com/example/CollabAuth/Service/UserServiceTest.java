@@ -118,4 +118,40 @@ class ServiceImpTest {
         verify(userRepo, times(1)).save(any(User.class));
         verify(emailClientService, times(1)).SendWelcomeMail("test@example.com", "testuser");
     }
+
+    @Test
+    void testRegisterUser_UsernameAlreadyExists_ThrowsDuplicateResourceException() {
+        // Arrange
+        when(userRepo.existsByUsername(anyString())).thenReturn(true);
+
+        // Act & Assert
+        DuplicateResourceException exception = assertThrows(
+                DuplicateResourceException.class,
+                () -> serviceImp.registerUser(registerRequest)
+        );
+
+        assertEquals("Username Already Exists", exception.getMessage());
+        verify(userRepo, times(1)).existsByUsername("testuser");
+        verify(userRepo, never()).save(any(User.class));
+        verify(emailClientService, never()).SendWelcomeMail(anyString(), anyString());
+    }
+
+    @Test
+    void testRegisterUser_EmailAlreadyExists_ThrowsDuplicateResourceException() {
+        // Arrange
+        when(userRepo.existsByUsername(anyString())).thenReturn(false);
+        when(userRepo.existsByEmail(anyString())).thenReturn(true);
+
+        // Act & Assert
+        DuplicateResourceException exception = assertThrows(
+                DuplicateResourceException.class,
+                () -> serviceImp.registerUser(registerRequest)
+        );
+
+        assertEquals("Email Already Exists", exception.getMessage());
+        verify(userRepo, times(1)).existsByUsername("testuser");
+        verify(userRepo, times(1)).existsByEmail("test@example.com");
+        verify(userRepo, never()).save(any(User.class));
+        verify(emailClientService, never()).SendWelcomeMail(anyString(), anyString());
+    }
 }
