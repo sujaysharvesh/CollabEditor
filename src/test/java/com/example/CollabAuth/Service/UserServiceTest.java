@@ -193,4 +193,72 @@ class ServiceImpTest {
         verify(userMapper, times(1)).toUserResponseDTO(any(User.class));
     }
 
+    @Test
+    void testRegisterUser_PasswordIsHashed() {
+        // Arrange
+        String rawPassword = "password123";
+        String hashedPassword = "hashedPassword";
+
+        when(userRepo.existsByUsername(anyString())).thenReturn(false);
+        when(userRepo.existsByEmail(anyString())).thenReturn(false);
+        when(passwordEncoder.encode(rawPassword)).thenReturn(hashedPassword);
+        when(userRepo.save(any(User.class))).thenAnswer(invocation -> {
+            User user = invocation.getArgument(0);
+            assertEquals(hashedPassword, user.getPassword());
+            return user;
+        });
+        when(userMapper.toUserResponseDTO(any(User.class))).thenReturn(userResponse);
+        doNothing().when(emailClientService).SendWelcomeMail(anyString(), anyString());
+
+        // Act
+        serviceImp.registerUser(registerRequest);
+
+        // Assert
+        verify(passwordEncoder, times(1)).encode(rawPassword);
+    }
+
+    @Test
+    void testRegisterUser_SetsCorrectProviderAndProviderId() {
+        // Arrange
+        when(userRepo.existsByUsername(anyString())).thenReturn(false);
+        when(userRepo.existsByEmail(anyString())).thenReturn(false);
+        when(passwordEncoder.encode(anyString())).thenReturn("hashedPassword");
+        when(userRepo.save(any(User.class))).thenAnswer(invocation -> {
+            User user = invocation.getArgument(0);
+            assertEquals(User.AuthProvider.LOCAL, user.getProvider());
+            assertEquals("None", user.getProviderId());
+            assertNotNull(user.getCreatedAt());
+            return user;
+        });
+        when(userMapper.toUserResponseDTO(any(User.class))).thenReturn(userResponse);
+        doNothing().when(emailClientService).SendWelcomeMail(anyString(), anyString());
+
+        // Act
+        serviceImp.registerUser(registerRequest);
+
+        // Assert
+        verify(userRepo, times(1)).save(any(User.class));
+    }
+
+    @Test
+    void testLoginUser_GeneratesTokenWithCorrectUserPrinciple() {
+        // Arrange
+        String jwtToken = "jwt-token";
+
+        when(userRepo.findByEmail(anyString())).thenReturn(Optional.of(testUser));
+        when(passwordEncoder.matches(anyString(), anyString())).thenReturn(true);
+        when(jwtUtils.generateTokenFromUserPrinciple(any(UserPrinciple.class))).thenReturn(jwtToken);
+        when(userMapper.toUserResponseDTO(any(User.class))).thenReturn(userResponse);
+
+        // Act
+        serviceImp.loginUser(loginRequest);
+
+        // Assert
+        verify(jwtUtils, times(1)).generateTokenFromUserPrinciple(argThat(principle ->
+                principle.getId().equals(testUser.getId()) &&
+                        principle.getUsername().equals(testUser.getUsername()) &&
+                        principle.getEmail().equals(testUser.getEmail())
+        ));
+    }
+
 }
