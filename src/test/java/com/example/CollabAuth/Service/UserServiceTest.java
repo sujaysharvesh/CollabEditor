@@ -154,4 +154,43 @@ class ServiceImpTest {
         verify(userRepo, never()).save(any(User.class));
         verify(emailClientService, never()).SendWelcomeMail(anyString(), anyString());
     }
+
+    @Test
+    void testLoginUser_InvalidPassword_ThrowsValidationException() {
+        // Arrange
+        when(userRepo.findByEmail(anyString())).thenReturn(Optional.of(testUser));
+        when(passwordEncoder.matches(anyString(), anyString())).thenReturn(false);
+
+        // Act & Assert
+        ValidationException exception = assertThrows(
+                ValidationException.class,
+                () -> serviceImp.loginUser(loginRequest)
+        );
+
+        assertEquals("Invalid credentials or User Does NOt found", exception.getMessage());
+        verify(userRepo, times(1)).findByEmail("test@example.com");
+        verify(passwordEncoder, times(1)).matches("password123", "hashedPassword");
+        verify(jwtUtils, never()).generateTokenFromUserPrinciple(any(UserPrinciple.class));
+    }
+
+    @Test
+    void testCurrentUser_Success() {
+        // Arrange
+        UUID userId = testUser.getId();
+        when(userRepo.findById(userId)).thenReturn(Optional.of(testUser));
+        when(userMapper.toUserResponseDTO(any(User.class))).thenReturn(userResponse);
+
+        // Act
+        UserResponseDTO result = serviceImp.currentUser(userPrinciple);
+
+        // Assert
+        assertNotNull(result);
+        assertEquals(userId, result.getId());
+        assertEquals("testuser", result.getUsername());
+        assertEquals("test@example.com", result.getEmail());
+
+        verify(userRepo, times(1)).findById(userId);
+        verify(userMapper, times(1)).toUserResponseDTO(any(User.class));
+    }
+
 }
