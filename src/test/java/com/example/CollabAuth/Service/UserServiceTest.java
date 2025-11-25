@@ -1,6 +1,6 @@
 package com.example.CollabAuth.Service;
 
-package com.example.CollabAuth.User.Imp;
+
 
 import com.example.CollabAuth.Configuration.AuthConfig;
 import com.example.CollabAuth.Email.EmailClientService;
@@ -92,7 +92,7 @@ class ServiceImpTest {
         userPrinciple = UserPrinciple.loginUser(testUser);
 
         // Mock AuthConfig to return passwordEncoder
-        when(authConfig.passwordEncoder()).thenReturn(passwordEncoder);
+//        when(authConfig.passwordEncoder()).thenReturn(passwordEncoder);
     }
 
     @Test
@@ -191,6 +191,23 @@ class ServiceImpTest {
 
         verify(userRepo, times(1)).findById(userId);
         verify(userMapper, times(1)).toUserResponseDTO(any(User.class));
+    }
+
+    @Test
+    void testCurrentUser_UserNotFound_ThrowsValidationException() {
+        // Arrange
+        UUID userId = userPrinciple.getId();
+        when(userRepo.findById(userId)).thenReturn(Optional.empty());
+
+        // Act & Assert
+        ValidationException exception = assertThrows(
+                ValidationException.class,
+                () -> serviceImp.currentUser(userPrinciple)
+        );
+
+        assertEquals("User not found", exception.getMessage());
+        verify(userRepo, times(1)).findById(userId);
+        verify(userMapper, never()).toUserResponseDTO(any(User.class));
     }
 
     @Test
